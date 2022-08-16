@@ -1,3 +1,88 @@
-h1 {
-    color: red;
+body {
+    margin: 0;
+    font-family: sans-serif; 
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    flex: 1 50px;
+    background:#5995de;
+}
+
+header {
+    background: #b2d6ff;
+}
+
+main {
+    /* flex: 6 300px; */
+    padding: 1rem;
+    background: #eaedf0;
+}
+
+#signup {
+    background: #d6e9fe;
+}
+
+#feature-1 {
+    background: #f5cf8e;
+}
+
+#feature-2 {
+    background: #f09a9d;
+}
+
+#feature-3 {
+    background: #c8c6fa;
+}
+header, section {
+    flex: 50vw;
+    min-height: 200px;
+}
+
+header, section, nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 500px) and (max-width:899px) {
+    article {
+        flex-flow:row wrap;
+    }
+    nav {
+        flex: 100%;
+        min-height: 50px;
+    }
+    section {
+        height: 50vw;
+    }
+   
+   }
+@media screen and (min-width: 900px) {
+    article{ 
+        flex-flow: row wrap;
+    }
+    nav {
+        flex: 100%;
+        min-height: 50px;
+    }
+    .feature {
+        flex: calc(100vw / 3);
+        min-height: calc(100vw / 3 *1.25 );
+    }
+    #signup {
+        order: 1;
+        min-height: auto;
+        height: 100px;
+    }
+    header {
+        flex: 100vw;
+        height: 25vw;
+    }
+    main {
+        order: 2;
+    }
 }
